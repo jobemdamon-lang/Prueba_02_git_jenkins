@@ -27,6 +27,9 @@ echo "instalando dependencias ..."
 pip install --upgrade pip --break-system-packages
 pip install -r requirements.txt --break-system-packages
 
+
+mkdir -p reports
+
 # Ejecutar las pruebas
 echo "ejecutando pruebas con pytest"
 venv/bin/python pytest test/ --junitxml=reports/test-results.xml --html=reports/test-results.html --self-contained-html
